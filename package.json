@@ -1,0 +1,34 @@
+{
+  "name": "@ruiyun/fastapi",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wen911119/fastapi.git"
+  },
+  "keywords": [
+    "fastify",
+    "api",
+    "framework"
+  ],
+  "author": "wen911119@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wen911119/fastapi/issues"
+  },
+  "homepage": "https://github.com/wen911119/fastapi#readme",
+  "dependencies": {
+    "fastify": "^2.3.0",
+    "@ruiyun/fastify-api-loader": "^0.2.1",
+    "@ruiyun/fastify-config-loader": "^0.2.0",
+    "@ruiyun/fastify-eureka": "^0.2.0",
+    "@ruiyun/fastify-grpc-client": "^0.2.0",
+    "@ruiyun/fastify-sequelize": "^0.2.0",
+    "@ruiyun/fastify-service-loader": "^0.2.0",
+    "fastify-swagger": "^2.3.1"
+  }
+}
