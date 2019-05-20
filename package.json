@@ -30,5 +30,8 @@
     "@ruiyun/fastify-sequelize": "^0.2.0",
     "@ruiyun/fastify-service-loader": "^0.2.0",
     "fastify-swagger": "^2.3.1"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
