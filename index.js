@@ -9,10 +9,9 @@ exports.Router = require("./libs/router");
 const App = require("fastify")({
   logger: IS_NOT_PRODUCTION
 });
-
 // 加载配置
 App.register(require("@ruiyun/fastify-config-loader"), {
-  path: path.resolve(TARGET_PROJECT_PATH, "./config")
+  path: path.resolve(TARGET_PROJECT_PATH, "./src/config")
 });
 
 // eureka
@@ -31,7 +30,7 @@ App.register(require("@ruiyun/fastify-grpc-client"), parent => {
 App.register(require("@ruiyun/fastify-sequelize"), parent => {
   return {
     databases: parent.config.databases,
-    path: path.resolve(TARGET_PROJECT_PATH, "./dbs")
+    path: path.resolve(TARGET_PROJECT_PATH, "./src/dbs")
   };
 });
 
@@ -44,12 +43,12 @@ if (IS_NOT_PRODUCTION) {
 
 // 注册api
 App.register(require("@ruiyun/fastify-api-loader"), {
-  path: path.resolve(TARGET_PROJECT_PATH, "./api")
+  path: path.resolve(TARGET_PROJECT_PATH, "./src/api")
 });
 
 // 注册service
 App.register(require("@ruiyun/fastify-service-loader"), {
-  path: path.resolve(TARGET_PROJECT_PATH, "./services")
+  path: path.resolve(TARGET_PROJECT_PATH, "./src/services")
 });
 
 App.start = port => {
