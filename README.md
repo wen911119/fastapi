@@ -1,5 +1,5 @@
 > ### 快速开始
-1. 全局安装 ==@ruiyun/fastapi-cli==
+1. 全局安装 @ruiyun/fastapi-cli
 ```
 yarn global add @ruiyun/fastapi-cli
 ```
@@ -144,5 +144,9 @@ todo
 todo
 
 > ### 路由
+
+todo
+
+> ### Plugins写法
 
 todo
