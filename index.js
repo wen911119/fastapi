@@ -1,5 +1,4 @@
 const IS_NOT_PRODUCTION = process.env.NODE_ENV !== "production";
-const TARGET_PROJECT_PATH = process.cwd();
 const path = require("path");
 
 exports.Service = require("./libs/service");
@@ -11,7 +10,7 @@ const App = require("fastify")({
 });
 // 加载配置
 App.register(require("@ruiyun/fastify-config-loader"), {
-  path: path.resolve(TARGET_PROJECT_PATH, "./src/config")
+  path: path.resolve(require.main.filename, "../config")
 });
 
 // eureka
@@ -30,7 +29,7 @@ App.register(require("@ruiyun/fastify-grpc-client"), parent => {
 App.register(require("@ruiyun/fastify-sequelize"), parent => {
   return {
     databases: parent.config.databases,
-    path: path.resolve(TARGET_PROJECT_PATH, "./src/dbs")
+    path: path.resolve(require.main.filename, "../dbs")
   };
 });
 
@@ -43,12 +42,12 @@ if (IS_NOT_PRODUCTION) {
 
 // 注册api
 App.register(require("@ruiyun/fastify-api-loader"), {
-  path: path.resolve(TARGET_PROJECT_PATH, "./src/api")
+  path: path.resolve(require.main.filename, "../api")
 });
 
 // 注册service
 App.register(require("@ruiyun/fastify-service-loader"), {
-  path: path.resolve(TARGET_PROJECT_PATH, "./src/services")
+  path: path.resolve(require.main.filename, "../services")
 });
 
 App.start = port => {
