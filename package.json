@@ -28,8 +28,8 @@
     "@ruiyun/fastify-grpc-client": "^0.2.2",
     "@ruiyun/fastify-sequelize": "^0.2.2",
     "@ruiyun/fastify-service-loader": "^0.2.1",
-    "fastify": "^2.3.0",
-    "fastify-swagger": "^2.3.1"
+    "fastify": "^2.8.0",
+    "fastify-swagger": "^2.4.0"
   },
   "publishConfig": {
     "access": "public"
