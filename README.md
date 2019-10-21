@@ -235,7 +235,7 @@ service 是可复用逻辑的集合。除了业务逻辑外，有几点需要注
 5. 最终的path会形如[host:port/api文件名/api方法名]。比如示例的src/api/dog.js中有个add方法，最终的路径就是10.100.1.165:3000/dog/add。如果还是不清楚，可以看下启动后自带的swagger文档。
 
 > ### Schema
-schema可以校验输入输出、生成文档、提高性能。它的格式是基于[json-schema](https://json-schema.org)。常用的简单校验我建议看看例子就行了，碰到复杂的校验再去看看他的[官网](https://note.youdao.com/)。
+schema可以校验输入输出、生成文档、提高性能。它的格式是基于[json-schema](https://json-schema.org)。常用的简单校验我建议看看例子就行了，碰到复杂的校验再去看看他的[官网例子](https://json-schema.org/understanding-json-schema/index.html)。oneOf见[这里](https://stackoverflow.com/questions/24023536/how-do-i-require-one-field-or-another-or-one-of-two-others-but-not-all-of-them)
 
 > ### Plugins
 
