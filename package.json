@@ -1,6 +1,6 @@
 {
   "name": "@ruiyun/fastapi",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -29,6 +29,7 @@
     "@ruiyun/fastify-sequelize": "^0.2.5",
     "@ruiyun/fastify-service-loader": "^0.2.3",
     "fastify": "^2.8.0",
+    "fastify-formbody": "^3.1.0",
     "fastify-swagger": "^2.4.0"
   },
   "publishConfig": {

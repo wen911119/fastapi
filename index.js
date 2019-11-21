@@ -8,6 +8,7 @@ exports.Router = require("./libs/router");
 const App = require("fastify")({
   logger: IS_NOT_PRODUCTION
 });
+App.register(require('fastify-formbody'));
 // 加载配置
 App.register(require("@ruiyun/fastify-config-loader"), {
   path: path.resolve(require.main.filename, "../config")
