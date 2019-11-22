@@ -1,4 +1,6 @@
 const IS_NOT_PRODUCTION = process.env.NODE_ENV !== "production";
+const FORM_BODY = process.env.FORM_BODY;
+
 const path = require("path");
 
 exports.Service = require("./libs/service");
@@ -8,7 +10,9 @@ exports.Router = require("./libs/router");
 const App = require("fastify")({
   logger: IS_NOT_PRODUCTION
 });
-App.register(require('fastify-formbody'));
+if (FORM_BODY) {
+  App.register(require('fastify-formbody'));
+};
 // 加载配置
 App.register(require("@ruiyun/fastify-config-loader"), {
   path: path.resolve(require.main.filename, "../config")
