@@ -1,5 +1,6 @@
 const IS_NOT_PRODUCTION = process.env.NODE_ENV !== "production";
 const FORM_BODY = process.env.FORM_BODY;
+const BODY_LIMIT = process.env.BODY_LIMIT;
 
 const path = require("path");
 
@@ -8,7 +9,8 @@ exports.API = require("./libs/api");
 exports.Router = require("./libs/router");
 
 const App = require("fastify")({
-  logger: IS_NOT_PRODUCTION
+  logger: IS_NOT_PRODUCTION,
+  bodyLimit: BODY_LIMIT,
 });
 if (FORM_BODY) {
   App.register(require('fastify-formbody'));
